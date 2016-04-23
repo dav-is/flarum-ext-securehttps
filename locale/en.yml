@@ -1,0 +1,7 @@
+davis-securehttps:
+  admin:
+    settings:
+      title: Configuration
+      replace: Proxy Images through https
+  forum:
+    removed: "Image removed from post due to lack of support for https."
