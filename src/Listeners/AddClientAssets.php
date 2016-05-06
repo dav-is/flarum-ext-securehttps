@@ -22,12 +22,13 @@ class AddClientAssets
             $event->addBootstrapper('Davis/SecureHttps/main');
         }
 
-        /*if ($event->isAdmin()) {
+        if ($event->isAdmin()) {
             $event->addAssets([
-                __DIR__.'/../../js/admin/dist/extension.js'
+                __DIR__.'/../../js/admin/dist/extension.js',
+                __DIR__.'/../../less/admin/extension.less'
             ]);
             $event->addBootstrapper('Davis/SecureHttps/main');
-        }*/
+        }
     }
     
     public function addLocales(ConfigureLocales $event)

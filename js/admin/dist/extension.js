@@ -22,15 +22,6 @@ System.register('Davis/SecureHttps/components/SecureHttpsSettingsModal', ['flaru
         }
 
         babelHelpers.createClass(SecureHttpsSettingsModal, [{
-          key: 'init',
-          value: function init() {
-            babelHelpers.get(Object.getPrototypeOf(SecureHttpsSettingsModal.prototype), 'init', this).call(this);
-
-            if (this.setting('davis-securehttps.replace')() == undefined) {
-              this.setting('davis-securehttps.replace')('true');
-            }
-          }
-        }, {
           key: 'className',
           value: function className() {
             return 'SecureHttpsSettingsModal Modal--small';
@@ -47,9 +38,10 @@ System.register('Davis/SecureHttps/components/SecureHttpsSettingsModal', ['flaru
               'div',
               { className: 'Form-group' },
               Switch.component({
-                state: this.setting('davis.securehttps.replace')(),
+                className: "davis-securehttps-switch",
+                state: this.setting('davis-securehttps.proxy')(),
                 children: app.translator.trans('davis-securehttps.admin.settings.replace'),
-                onchange: this.setting('davis.securehttps.replace')
+                onchange: this.setting('davis-securehttps.proxy')
               })
             )];
           }

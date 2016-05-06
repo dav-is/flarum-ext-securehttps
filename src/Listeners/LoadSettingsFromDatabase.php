@@ -8,10 +8,10 @@ use Illuminate\Contracts\Events\Dispatcher;
 class LoadSettingsFromDatabase
 {
     
-    protected $packagePrefix = 'davis.securehttps.';
+    protected $packagePrefix = 'davis-securehttps.';
 
     protected $fieldsToGet = array(
-    'replace',
+    'proxy',
     );
   
     protected $settings;
