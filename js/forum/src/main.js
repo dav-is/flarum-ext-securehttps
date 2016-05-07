@@ -10,6 +10,7 @@ app.initializers.add('davis-securehttps-forum', function() {
             var myArray;
             while ((myArray = myRe.exec(this.props.post.contentHtml())) !== null) {
                 myArray[1] = encodeURIComponent(myArray[1]);
+                myArray[1] = myArray[1].replace('%2F', '%252F'); //Apache Support
                 this.props.post.contentHtml = m.prop(
                     this.props.post.contentHtml().replace(
                         myArray[0],

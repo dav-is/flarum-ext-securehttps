@@ -20,6 +20,7 @@ System.register('Davis/SecureHttps/main', ['flarum/app', 'flarum/extend', 'flaru
                         var myArray;
                         while ((myArray = myRe.exec(this.props.post.contentHtml())) !== null) {
                             myArray[1] = encodeURIComponent(myArray[1]);
+                            myArray[1] = myArray[1].replace('%2F', '%252F'); //Apache Support
                             this.props.post.contentHtml = m.prop(this.props.post.contentHtml().replace(myArray[0], '<img src="' + app.forum.attribute('apiUrl') + '/davis/securehttps/' + myArray[1] + '/" title="' + myArray[2] + '" alt="' + myArray[3] + '">'));
                         }
                     } else {
