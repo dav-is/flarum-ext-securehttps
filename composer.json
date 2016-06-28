@@ -1,7 +1,7 @@
 {
-    "name": "davis/flarum-ext-varnish",
-    "description": "Reset Varish Cache",
-    "keywords": ["varnish", "flarum", "davis", "cache"],
+    "name": "davis/flarum-ext-securehttps",
+    "description": "Changes all images using http to https",
+    "keywords": ["https", "flarum", "davis", "customization", "images"],
     "type": "flarum-extension",
     "license": "MIT",
     "authors": [
@@ -11,24 +11,24 @@
         }
     ],
     "support": {
-        "issues": "https://github.com/dav-is/flarum-ext-varnish/issues",
-        "source": "https://github.com/dav-is/flarum-ext-varnish"
+        "issues": "https://github.com/dav-is/flarum-ext-securehttps/issues",
+        "source": "https://github.com/dav-is/flarum-ext-securehttps"
     },
     "require": {
         "flarum/core": "^0.1.0-beta.5"
     },
     "autoload": {
         "psr-4": {
-            "Davis\\Varnish\\": "src/"
+            "Davis\\SecureHttps\\": "src/"
         }
     },
     "extra": {
         "flarum-extension": {
-            "title": "Varnish Caching",
+            "title": "Secure HTTPS",
             "icon": {
-                "name": "bomb",
+                "name": "lock",
                 "backgroundColor": "#000",
-                "color": "red"
+                "color": "green"
             }
         }
     }
