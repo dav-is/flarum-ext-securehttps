@@ -2,7 +2,7 @@ var flarum = require('flarum-gulp');
 
 flarum({
   modules: {
-    'Davis/SecureHttps': [
+    'Davis/Varnish': [
       'src/**/*.js'
     ]
   }
