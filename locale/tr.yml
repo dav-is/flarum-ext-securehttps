@@ -1,0 +1,8 @@
+davis-securehttps:
+  admin:
+    settings:
+      title: Konfigürasyon
+      replace: Resimleri https üzerinden gönder
+  forum:
+    removed: "https desteği olmadığından fotoğraf kaldırıldı."
+show: Yine de göster
